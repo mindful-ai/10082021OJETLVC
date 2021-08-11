@@ -387,3 +387,101 @@ CYAN  ------>  4
 undefined
 > .exit
 
+
+
+
+C:\Users\Purushotham\Desktop\OracleJET>node
+Welcome to Node.js v12.14.0.
+Type ".help" for more information.
+> var L = ["Rajesh", 35, "Oracle", "India"]
+undefined
+> L
+[ 'Rajesh', 35, 'Oracle', 'India' ]
+> L[0]
+'Rajesh'
+> L[1]
+35
+> L[2]
+'Oracle'
+> L[3]
+'India'
+> // 0 -> name, 1 -> age, 2 -> company, 3 -> india
+undefined
+> L.splice(2, 0 , "1350000")
+[]
+> L
+[ 'Rajesh', 35, '1350000', 'Oracle', 'India' ]
+> L[3]
+'Oracle'
+>
+> var p = {"name":"Rajesh", "age":35, "company":"oracle", "country":"India"}
+undefined
+> p
+{ name: 'Rajesh', age: 35, company: 'oracle', country: 'India' }
+> typeof(p)
+'object'
+> p['name']
+'Rajesh'
+> p.age
+35
+> p.company
+'oracle'
+> p.country
+'India'
+> p.salary
+undefined
+> p.salary = "13560000"
+'13560000'
+> p
+{
+  name: 'Rajesh',
+  age: 35,       
+  company: 'oracle',
+  country: 'India',
+  salary: '13560000'
+}
+> Object.keys(p)
+[ 'name', 'age', 'company', 'country', 'salary' ]
+> Object.values(p)
+[ 'Rajesh', 35, 'oracle', 'India', '13560000' ]
+>
+> p.pop('name')
+Thrown:
+TypeError: p.pop is not a function
+> delete p.name
+true
+> p
+{ age: 35, company: 'oracle', country: 'India', salary: '13560000' }
+> omit(p, 'age')
+Thrown:
+ReferenceError: omit is not defined
+> p.omit('age')
+Thrown:
+TypeError: p.omit is not a function
+> p.name = "Ramesh";
+'Ramesh'
+> p
+{
+  age: 35,
+  company: 'oracle',
+  country: 'India',
+  salary: '13560000',
+  name: 'Ramesh'
+}
+> omit()
+Thrown:
+ReferenceError: omit is not defined
+> pick()
+Thrown:
+ReferenceError: pick is not defined
+>
+> p
+{
+  age: 35,
+  company: 'oracle',
+  country: 'India',
+  salary: '13560000',
+  name: 'Ramesh'
+}
+
+
